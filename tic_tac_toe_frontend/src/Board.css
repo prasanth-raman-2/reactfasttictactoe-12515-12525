@@ -1,0 +1,61 @@
+.ttt-board {
+  display: inline-block;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(22, 25, 37, 0.07);
+  padding: 24px;
+  margin: 0 auto;
+}
+.ttt-board-row {
+  display: flex;
+}
+
+.ttt-square {
+  width: 68px;
+  height: 68px;
+  margin: 5px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 2.5px solid var(--border-color);
+  border-radius: 12px;
+  outline: none;
+  transition: background 0.25s, border-color 0.25s;
+  cursor: pointer;
+}
+
+.ttt-square:disabled {
+  background: #eaeaea;
+  color: #adb5bd;
+  opacity: 0.75;
+  cursor: default;
+}
+
+/* Responsive: reduce board/square size on mobile */
+@media (max-width: 600px) {
+  .ttt-board {
+    padding: 10px;
+  }
+  .ttt-square {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    margin: 2.5px;
+  }
+}
+
+.ttt-status {
+  margin-bottom: 20px;
+}
+
+.ttt-status-main {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary, #1976D2);
+}
+
+.ttt-status-msg {
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
